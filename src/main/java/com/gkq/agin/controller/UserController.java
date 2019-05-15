@@ -14,10 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     private UserService userService;
-    @RequestMapping(value = "selcetUser")
-    public String getIndex(Model model){
-        User user = userService.selectUserById(1);
-        model.addAttribute("user", user);
-        return "index";
+
+    @RequestMapping(value = "selcetUserById")
+    public void findUserById(int id){
+        User user = userService.findUserById(id);
+        System.out.println(user.getPassword());
+
     }
 }
