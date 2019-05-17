@@ -5,6 +5,6 @@ import com.gkq.agin.model.User;
 import org.apache.ibatis.annotations.Select;
 
 public interface UserMapper extends BaseMapper<User> {
-    @Select("select *from t_user where user_id =#{id}")
+    @Select("select *from t_user where id =#{id}")
     User findById(int id);
 }

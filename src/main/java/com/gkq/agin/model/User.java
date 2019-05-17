@@ -8,14 +8,14 @@ import javax.persistence.Id;
 @Data
 public class User {
     @Id
-    @Column(name = "user_id")
-    private Integer userId;
+    @Column(name = "id")
+    private Integer id;
 
-    @Column(name = "user_name")
+    @Column(name = "username")
     private String userName;
 
     @Column(name = "password")
-    private String password;
+    private String passWord;
 
     @Column(name = "phone")
     private String phone;

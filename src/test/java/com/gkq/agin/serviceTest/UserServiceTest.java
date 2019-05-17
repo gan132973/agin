@@ -15,7 +15,7 @@ public class UserServiceTest extends SpringTestCase {
     private UserService userService;
     @Test
     public void selectUserByIdTest(){
-        User user = userService.findUserById(1);
+        User user = userService.findUserById(2);
         logger.info("查找结果" + user);
     }
 

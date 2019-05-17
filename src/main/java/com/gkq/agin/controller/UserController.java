@@ -4,7 +4,6 @@ import com.gkq.agin.model.User;
 import com.gkq.agin.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,9 +15,5 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "selcetUserById")
-    public void findUserById(int id){
-        User user = userService.findUserById(id);
-        System.out.println(user.getPassword());
-
-    }
+    public void findUserById(int id){userService.findUserById(id); }
 }
