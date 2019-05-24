@@ -13,10 +13,6 @@ public class UserServiceTest extends SpringTestCase {
     Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
     private UserService userService;
-    @Test
-    public void selectUserByIdTest(){
-        User user = userService.findUserById(2);
-        logger.info("查找结果" + user);
-    }
+
 
 }
